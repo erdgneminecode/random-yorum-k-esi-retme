@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        width: 10%;
+        height:100px;
+        position: relative;
+        top: 300px;
+        left: 600px;
+        
+    }
+    #div2{
+        width: 200px;
+        height:100px;
+        background-color: rgb(255, 160, 122);
+        color: black;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    #div3{
+        width: 200px;
+        height:50px;
+        background-color: rgb(255, 247, 132);
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+        <div id="div3"></div>
+        </div>
+        <script>
+            var yorumlar=[{yorum:"her şey mükemmel",isim:"ALİ"},
+               { yorum:"çok kötü bir ürün",isim:"FATMA"},
+               {yorum:"beğeniyi hakediyorsunuz", isim:"AHMET"},
+               { yorum:"çok kaliteli bir ürün olmuş",isim:"AYLİN"}
+            ]
+            var random;
+            function sayiUret(){
+                random=Math.round(Math.random()*3);
+
+            }
+            setInterval (function(){
+   sayiUret();
+   document.getElementById("div2").innerHTML=yorumlar[random].yorum;
+   document.getElementById("div3").innerHTML=yorumlar[random].isim;
+            },2000);
+        </script>
+    </div>
+</body>
+</html>
